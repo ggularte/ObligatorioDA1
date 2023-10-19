@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{253B3D4C-6426-4A6C-9A04-D7DF8150E5E3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>UI</RootNamespace>
+    <AssemblyName>UI</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddNewFigureView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddNewFigureView.Designer.cs">
+      <DependentUpon>AddNewFigureView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddNewMaterialView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddNewMaterialView.Designer.cs">
+      <DependentUpon>AddNewMaterialView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddNewModelView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddNewModelView.Designer.cs">
+      <DependentUpon>AddNewModelView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientPanel.Designer.cs">
+      <DependentUpon>ClientPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DisponibleModelCustomControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DisponibleModelCustomControl.Designer.cs">
+      <DependentUpon>DisponibleModelCustomControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditSceneView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EditSceneView.Designer.cs">
+      <DependentUpon>EditSceneView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FigureCustomControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FigureCustomControl.Designer.cs">
+      <DependentUpon>FigureCustomControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListOfFiguresView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ListOfFiguresView.Designer.cs">
+      <DependentUpon>ListOfFiguresView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListOfMaterialsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ListOfMaterialsView.Designer.cs">
+      <DependentUpon>ListOfMaterialsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListOfModelsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ListOfModelsView.Designer.cs">
+      <DependentUpon>ListOfModelsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListOfScenesView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ListOfScenesView.Designer.cs">
+      <DependentUpon>ListOfScenesView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainPanel.Designer.cs">
+      <DependentUpon>MainPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialCustomControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MaterialCustomControl.Designer.cs">
+      <DependentUpon>MaterialCustomControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelCustomControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ModelCustomControl.Designer.cs">
+      <DependentUpon>ModelCustomControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PositionedModelCustomControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PositionedModelCustomControl.Designer.cs">
+      <DependentUpon>PositionedModelCustomControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SceneCustomControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SceneCustomControl.Designer.cs">
+      <DependentUpon>SceneCustomControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SigninView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SigninView.Designer.cs">
+      <DependentUpon>SigninView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignupView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SignupView.Designer.cs">
+      <DependentUpon>SignupView.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddNewFigureView.resx">
+      <DependentUpon>AddNewFigureView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddNewMaterialView.resx">
+      <DependentUpon>AddNewMaterialView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddNewModelView.resx">
+      <DependentUpon>AddNewModelView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientPanel.resx">
+      <DependentUpon>ClientPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DisponibleModelCustomControl.resx">
+      <DependentUpon>DisponibleModelCustomControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditSceneView.resx">
+      <DependentUpon>EditSceneView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FigureCustomControl.resx">
+      <DependentUpon>FigureCustomControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListOfFiguresView.resx">
+      <DependentUpon>ListOfFiguresView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListOfMaterialsView.resx">
+      <DependentUpon>ListOfMaterialsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListOfModelsView.resx">
+      <DependentUpon>ListOfModelsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListOfScenesView.resx">
+      <DependentUpon>ListOfScenesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainPanel.resx">
+      <DependentUpon>MainPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialCustomControl.resx">
+      <DependentUpon>MaterialCustomControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModelCustomControl.resx">
+      <DependentUpon>ModelCustomControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PositionedModelCustomControl.resx">
+      <DependentUpon>PositionedModelCustomControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SceneCustomControl.resx">
+      <DependentUpon>SceneCustomControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SigninView.resx">
+      <DependentUpon>SigninView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignupView.resx">
+      <DependentUpon>SignupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Domain\Domain.csproj">
+      <Project>{5221F9BD-75FD-465D-B32E-791AE33F9361}</Project>
+      <Name>Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Drivers\Drivers.csproj">
+      <Project>{7CF30598-6751-422C-A75C-CCB1E86D77B1}</Project>
+      <Name>Drivers</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\172626_user_male_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6703098_3d shape_3d sphere_geometric_geometry_round_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6703098_3d shape_3d sphere_geometric_geometry_round_icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6646203_3d_reality_room_scene_virtual_icon %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2682803_attention_erro_exclamation_mark_warn_icon %281%29.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>
